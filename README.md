@@ -281,3 +281,10 @@ Built by [Asir Khan](https://www.linkedin.com/in/asir-khan-310317264/).
 ## License
 
 MIT.
+
+## Related
+
+Other single-file tools in this portfolio that pair with this one:
+
+- [arcpy-nullscan](https://github.com/uhsear/arcpy-nullscan) - the attribute side of the same certification
+- [geocodesift](https://github.com/uhsear/geocodesift) - the same refusal to trust a number nobody checked
