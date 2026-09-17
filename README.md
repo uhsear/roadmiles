@@ -288,3 +288,4 @@ Other single-file tools in this portfolio that pair with this one:
 
 - [arcpy-nullscan](https://github.com/uhsear/arcpy-nullscan) - the attribute side of the same certification
 - [geocodesift](https://github.com/uhsear/geocodesift) - the same refusal to trust a number nobody checked
+- [sidestamp](https://github.com/uhsear/sidestamp) - vertex order is noise to roadmiles and the signal that defines LEFT here
