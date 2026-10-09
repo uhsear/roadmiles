@@ -58,11 +58,12 @@ PASS  check() and raises() really do record a failure  <-- pinned defect
 PASS  a file ArcGIS wrote with a UTF-8 byte order mark reads  <-- pinned defect
 PASS  and one road at --precision 3, so the flag reaches the hash and changes the answer end to end  <-- pinned defect
 PASS  --write-duplicates without --apply writes NOTHING  <-- pinned defect
+PASS  a unique prefix of --apply, --ap, is refused by the parser  <-- pinned defect
 PASS  written with LF on every platform, so two desks produce the same file  <-- pinned defect
 PASS  and certifying the duplicates file gives back exactly the mileage that was removed  <-- pinned defect
 PASS  the self-test leaves no temporary directory behind
 --------------------------------------------------------------------
-244 assertions, 0 failed
+245 assertions, 0 failed
 ```
 
 ## Requirements
@@ -70,7 +71,7 @@ PASS  the self-test leaves no temporary directory behind
 Python 3.9 or newer. Nothing to install: no `arcpy`, no `shapely`, no `pyproj`, no third-party
 package at all. It uses `json`, `math`, `hashlib` and `argparse`, and it runs on ArcGIS Pro's
 Python and on a plain `python3` equally. The self-test needs no network, no database and no
-geodatabase, and produces the same 244 assertions on Windows and on Linux.
+geodatabase, and produces the same 245 assertions on Windows and on Linux.
 
 ```
 git clone https://github.com/uhsear/roadmiles.git

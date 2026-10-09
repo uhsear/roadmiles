@@ -1308,6 +1308,18 @@ def self_test():
         code, out = capture(lambda: main([roads, "--precision", "-1"]))
         check(code == 64, "a negative --precision is a usage error")
 
+        # ---- a unique prefix of the write flag is refused, not read as --apply
+        quiet_err = sys.stderr
+        sys.stderr = io.StringIO()
+        try:
+            _parse([roads, "--ap"])
+            refused = False
+        except SystemExit as exc:
+            refused = exc.code == 2
+        finally:
+            sys.stderr = quiet_err
+        check(refused, "a unique prefix of --apply, --ap, is refused by the parser  <-- pinned defect")
+
         # ---- reading the layer from stdin, which is how a curl gets in here
         real_stdin = sys.stdin
         try:
@@ -1389,6 +1401,7 @@ def self_test():
 def _parse(argv):
     ap = argparse.ArgumentParser(
         prog="roadmiles.py",
+        allow_abbrev=False,
         description="Certify centerline mileage and refuse to count the same "
                     "road twice, including the copy someone digitized backwards.",
         epilog="Config precedence: flag > environment > the CONFIGURATION "
