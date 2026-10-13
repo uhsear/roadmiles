@@ -615,7 +615,7 @@ def self_test():
         return {"type": "Feature", "properties": dict(props),
                 "geometry": {"type": kind, "coordinates": coords}}
 
-    # A real road: a mile and a bit of SR-40 east of Riverton, west to east.
+    # A real road: a mile and a bit of a Florida state road, west to east.
     SR40 = [[-82.10000, 29.18700], [-82.09000, 29.18710],
             [-82.08000, 29.18730], [-82.07000, 29.18700]]
     SR40_BACKWARDS = list(reversed(SR40))

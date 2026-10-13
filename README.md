@@ -114,8 +114,8 @@ that the run failed**, so a scheduled check can treat it as "somebody has editin
 A run over a nine feature test layer, three of whose roads are entered twice:
 
 ```
-$ python roadmiles.py riverton_roads.geojson --by MAINT_AUTH
-roadmiles: riverton_roads.geojson
+$ python roadmiles.py county_roads.geojson --by MAINT_AUTH
+roadmiles: county_roads.geojson
 9 part(s) from 9 feature(s), 1 skipped
 rounded to 6 decimal degrees, measured geodesically on WGS84
 
